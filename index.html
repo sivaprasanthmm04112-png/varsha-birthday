@@ -27,7 +27,7 @@ p{font-size:clamp(.9rem,2.6vw,1.18rem);line-height:1.65;color:#ffe8f0;margin:10p
 button{font:600 clamp(.84rem,2.8vw,1rem) Poppins;color:white;border:1px solid #ffffff38;border-radius:999px;padding:12px 21px;background:linear-gradient(135deg,#ff4e8b,#a52cff);box-shadow:0 10px 35px #ff4e8b40;cursor:pointer;transition:.25s;max-width:100%;touch-action:manipulation}
 button:hover{transform:translateY(-3px) scale(1.03)}
 .ring{width:min(54vw,300px);height:min(54vw,300px);padding:6px;border-radius:50%;margin:0 auto 20px;background:conic-gradient(#ff5d91,#ffd1df,#a934ff,#ff5d91);animation:rotate 8s linear infinite;box-shadow:0 0 60px #ff5d9155}
-.ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:5px solid #1b0714;animation:rotateBack 8s linear infinite}
+.ring img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:50% 43%;border:5px solid #1b0714;animation:rotateBack 8s linear infinite}
 @keyframes rotate{to{transform:rotate(360deg)}}@keyframes rotateBack{to{transform:rotate(-360deg)}}
 .float{position:fixed;bottom:-50px;z-index:2;pointer-events:none;animation:up linear forwards;filter:drop-shadow(0 0 7px #ff6c9a)}
 @keyframes up{0%{transform:translateY(0) scale(.6);opacity:0}15%{opacity:.85}100%{transform:translateY(-115vh) rotate(25deg) scale(1.15);opacity:0}}
@@ -36,10 +36,12 @@ button:hover{transform:translateY(-3px) scale(1.03)}
 .card{background:#ffffff0e;border:1px solid #ffffff24;border-radius:24px;padding:clamp(16px,4vw,25px);backdrop-filter:blur(15px);box-shadow:0 25px 70px #0007;margin:14px auto;max-width:820px}
 .letter{font:600 clamp(1.12rem,4.5vw,2.1rem)/1.45 Caveat;color:#fff4f7}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:900px;margin:16px auto}
-.gallery img{width:100%;height:clamp(120px,18vw,210px);object-fit:cover;border-radius:16px;border:1px solid #ffffff30;box-shadow:0 12px 30px #0007;transition:.35s}
+.gallery img{width:100%;height:clamp(120px,18vw,210px);object-fit:cover;object-position:50% 35%;aspect-ratio:4/5;border-radius:16px;border:1px solid #ffffff30;box-shadow:0 12px 30px #0007;transition:.35s}
+.face-photo{object-fit:cover!important}
+.p1{object-position:50% 43%!important}.p2{object-position:50% 30%!important}.p3{object-position:50% 20%!important}.p4{object-position:50% 24%!important}.p5{object-position:50% 35%!important}.p6{object-position:50% 32%!important}.p7{object-position:50% 38%!important}.p8{object-position:50% 25%!important}.p9{object-position:50% 28%!important}.p10{object-position:50% 27%!important}.p11{object-position:50% 20%!important}
 .gallery img:hover{transform:scale(1.035) rotate(-1deg);z-index:2}
 .memory{display:grid;grid-template-columns:1fr 1.3fr;gap:16px;align-items:center;max-width:900px;margin:auto}
-.memory img{width:100%;height:clamp(250px,40vw,410px);object-fit:cover;border-radius:22px;border:2px solid #ffffff35;box-shadow:0 18px 50px #0008}
+.memory img{width:100%;height:clamp(300px,42vw,440px);object-fit:cover;object-position:50% 32%;aspect-ratio:4/5;border-radius:22px;border:2px solid #ffffff35;box-shadow:0 18px 50px #0008}
 .pill{display:inline-block;padding:7px 12px;border:1px solid #ffffff2b;border-radius:999px;color:#ffd0df;margin:3px;background:#ffffff0c;font-size:.82rem}
 .nav{position:fixed;bottom:max(10px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:20;padding:7px 10px;border-radius:999px;background:#13050ecc;border:1px solid #ffffff25;backdrop-filter:blur(15px);display:flex;gap:6px;max-width:calc(100vw - 24px)}
 .dot{width:8px;height:8px;border-radius:50%;background:#ffffff44;cursor:pointer;flex:0 0 auto}.dot.on{background:#ff7aa7;box-shadow:0 0 13px #ff7aa7}
@@ -55,9 +57,9 @@ button:hover{transform:translateY(-3px) scale(1.03)}
   p{font-size:clamp(.88rem,3.8vw,1rem);line-height:1.55}
   .ring{width:min(52vw,245px);height:min(52vw,245px);margin-bottom:16px}
   .gallery{grid-template-columns:repeat(2,1fr);gap:8px;margin:13px auto}
-  .gallery img{height:clamp(112px,31vw,145px);border-radius:13px}
+  .gallery img{height:auto;min-height:150px;aspect-ratio:4/5;border-radius:13px}
   .memory{grid-template-columns:1fr;gap:10px}
-  .memory img{height:min(55vh,275px);border-radius:20px}
+  .memory img{height:min(62vh,390px);aspect-ratio:4/5;border-radius:20px}
   .card{padding:15px 14px;margin:10px auto;border-radius:20px}
   .letter{font-size:clamp(1.1rem,5.4vw,1.5rem);line-height:1.38}
   .pill{font-size:.72rem;padding:6px 9px}
@@ -70,8 +72,8 @@ button:hover{transform:translateY(-3px) scale(1.03)}
   h2{font-size:clamp(1.9rem,8.5vw,3rem)}
   .ring{width:min(50vw,210px);height:min(50vw,210px);padding:5px}
   .ring img{border-width:4px}
-  .gallery img{height:clamp(105px,30vw,128px)}
-  .memory img{height:min(46vh,245px)}
+  .gallery img{height:auto;min-height:142px;aspect-ratio:4/5}
+  .memory img{height:min(58vh,340px);aspect-ratio:4/5}
   .card{padding:13px 12px}
   .letter{font-size:clamp(1.05rem,5.2vw,1.35rem)}
   .nav{gap:5px}
@@ -81,8 +83,8 @@ button:hover{transform:translateY(-3px) scale(1.03)}
   .page{padding-top:48px;padding-bottom:78px}
   .ring{width:min(40vw,175px);height:min(40vw,175px);margin-bottom:11px}
   .gallery{margin:10px auto}
-  .gallery img{height:100px}
-  .memory img{height:205px}
+  .gallery img{height:120px;aspect-ratio:4/5}
+  .memory img{height:270px;aspect-ratio:4/5}
   .card{margin:8px auto;padding:11px}
   .letter{font-size:1.05rem;line-height:1.32}
   h1{font-size:clamp(2.8rem,13vw,4rem)}
@@ -92,18 +94,26 @@ button:hover{transform:translateY(-3px) scale(1.03)}
   .page{align-items:flex-start;padding-top:42px;padding-bottom:70px}
   .ring{width:150px;height:150px;margin-bottom:10px}
   .memory{grid-template-columns:1fr 1.2fr}
-  .memory img{height:190px}
+  .memory img{height:230px;aspect-ratio:4/5}
   .gallery{grid-template-columns:repeat(4,1fr)}
   .gallery img{height:90px}
 }
-</style>
+
+/* Face-first photo presentation: preserves the important upper/center area on small screens. */
+@media (max-width:700px){
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+  .gallery img{width:100%;height:auto;min-height:0;aspect-ratio:4/5}
+  .memory img{width:100%;height:auto;min-height:0;max-height:none;aspect-ratio:4/5}
+  .ring img{object-position:50% 43%}
+}
+''</style>
 </head>
 <body>
 <div id="sparkles"></div><div id="floating"></div><div class="counter" id="counter">1 / 9</div>
 
 <section class="page active">
 <div class="content">
- <div class="ring"><img src="photos/photo1.jpeg"></div>
+ <div class="ring"><img class="face-photo p1" src="photos/photo1.jpeg"></div>
  <div class="kicker">A tiny universe made for one very special girl</div>
  <h1>Happiest Birthday<br>Varshuuu Thangooo ❤️</h1>
  <p>Today, the whole page belongs to you. Tap below… I have something from my heart. 💌</p>
@@ -113,7 +123,7 @@ button:hover{transform:translateY(-3px) scale(1.03)}
 <section class="page"><div class="content">
  <div class="kicker">Chapter 02 · Us</div><h2>Somehow, my favourite memories always have you in them.</h2>
  <div class="gallery">
-  <img src="photos/photo2.jpeg"><img src="photos/photo3.jpeg"><img src="photos/photo4.jpeg"><img src="photos/photo5.jpeg">
+  <img class="face-photo p2" src="photos/photo2.jpeg"><img class="face-photo p3" src="photos/photo3.jpeg"><img class="face-photo p4" src="photos/photo4.jpeg"><img class="face-photo p5" src="photos/photo5.jpeg">
  </div>
  <p class="script" style="font-size:2rem">Two people. A thousand little moments. One story I never want to stop writing. ❤️</p>
  <button onclick="next()">Keep going, thangooo →</button>
@@ -121,7 +131,7 @@ button:hover{transform:translateY(-3px) scale(1.03)}
 
 <section class="page"><div class="content">
  <div class="kicker">Chapter 03 · Your smile</div>
- <div class="memory"><img src="photos/photo6.jpeg"><div class="card">
+ <div class="memory"><img class="face-photo p6" src="photos/photo6.jpeg"><div class="card">
  <h2 style="font-size:clamp(2.7rem,7vw,5rem)">You make my world softer.</h2>
  <p>There are moments when I look at you and quietly think, “How did I get this lucky?”</p>
  <span class="pill">🌸 Your smile</span><span class="pill">🫶 Your heart</span><span class="pill">✨ Your presence</span>
@@ -133,7 +143,7 @@ button:hover{transform:translateY(-3px) scale(1.03)}
  <div class="kicker">Chapter 04 · A little throwback</div>
  <h2>Before all these memories… there was this little girl. 🥹</h2>
  <div class="memory">
-  <img src="photos/photo11.jpeg">
+  <img class="face-photo p11" src="photos/photo11.jpeg">
   <div class="card letter">And look at you now… ❤️<br><br>Still the same precious soul, just grown into someone who means the absolute world to me.<br><br>Seeing this photo made me smile so much.</div>
  </div>
  <button onclick="next()">There is more… 💌</button>
@@ -150,7 +160,7 @@ button:hover{transform:translateY(-3px) scale(1.03)}
   And honestly… I could keep going forever. ❤️
  </div>
  <div class="gallery">
-  <img src="photos/photo7.jpeg"><img src="photos/photo8.jpeg"><img src="photos/photo9.jpeg"><img src="photos/photo10.jpeg">
+  <img class="face-photo p7" src="photos/photo7.jpeg"><img class="face-photo p8" src="photos/photo8.jpeg"><img class="face-photo p9" src="photos/photo9.jpeg"><img class="face-photo p10" src="photos/photo10.jpeg">
  </div>
  <button onclick="next()">Read what I really mean 🤍</button>
 </div></section>
@@ -175,22 +185,22 @@ button:hover{transform:translateY(-3px) scale(1.03)}
   To stand beside you when life gets hard.<br>
   And to celebrate every beautiful version of you.
  </div>
- <img src="photos/photo10.jpeg" style="width:min(100%,500px);max-height:430px;object-fit:cover;border-radius:28px;border:2px solid #ffffff35">
+ <img class="face-photo p10" src="photos/photo10.jpeg" style="width:min(100%,500px);max-height:430px;object-fit:cover;border-radius:28px;border:2px solid #ffffff35">
  <br><button onclick="next()">Almost there, birthday girl 💕</button>
 </div></section>
 
 <section class="page"><div class="content">
  <div class="kicker">Chapter 08 · Our memories</div><h2>More moments I want to keep forever.</h2>
  <div class="gallery">
-  <img src="photos/photo6.jpeg"><img src="photos/photo7.jpeg"><img src="photos/photo8.jpeg"><img src="photos/photo9.jpeg">
-  <img src="photos/photo2.jpeg"><img src="photos/photo3.jpeg"><img src="photos/photo4.jpeg"><img src="photos/photo5.jpeg">
+  <img class="face-photo p6" src="photos/photo6.jpeg"><img class="face-photo p7" src="photos/photo7.jpeg"><img class="face-photo p8" src="photos/photo8.jpeg"><img class="face-photo p9" src="photos/photo9.jpeg">
+  <img class="face-photo p2" src="photos/photo2.jpeg"><img class="face-photo p3" src="photos/photo3.jpeg"><img class="face-photo p4" src="photos/photo4.jpeg"><img class="face-photo p5" src="photos/photo5.jpeg">
  </div>
  <p class="script" style="font-size:2.2rem">Here's to many, many more. 🥂❤️</p>
  <button onclick="next()">Final page ❤️</button>
 </div></section>
 
 <section class="page"><div class="content">
- <div class="ring"><img src="photos/photo10.jpeg"></div>
+ <div class="ring"><img class="face-photo p10" src="photos/photo10.jpeg"></div>
  <div class="kicker">Chapter 09 · The only thing left to say</div>
  <h1>I LOVE YOU<br>VARSHUUU ❤️</h1>
  <p class="script" style="font-size:2.5rem">Happiest birthday to my beautiful thangooo. 🥹💕</p>
